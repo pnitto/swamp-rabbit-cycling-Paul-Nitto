@@ -1,7 +1,96 @@
 @import '../bower_components/bourbon/app/assets/stylesheets/bourbon';
 @import '../bower_components/neat/app/assets/stylesheets/neat';
 
+$mobile: new-breakpoint(max-width 480px);
+$desktop: new-breakpoint(max-width 965px);
 
 body {
-  background-color: black;
+  background-color: pink;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  @include outer-container;
+  border: 1px solid black;
+}
+.top {
+  height: 300px;
+  border: 1px solid black;
+}
+.swamp-rabbit-header {
+  @include span-columns(12);
+  text-align: center;
+}
+
+.logo {
+  @include outer-container;
+  @include span-columns(2);
+  height: 29%;
+  border: 1px solid black;
+  margin: auto;
+  float: none;
+  margin-top: 10%;
+  background-image: url('../images/bike-logo.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.best-gear {
+  height: 100px;
+  border: 1px solid black;
+  font-size: 22px;
+  font-family: "arial";
+  text-align: center;
+
+  @include media($desktop) {
+    text-align: center;
+  }
+}
+.recent-bike-photo {
+  height: 300px;
+  border: 1px solid black;
+  overflow:hidden;
+}
+.pictures {
+  @include media($mobile) {
+    height: 300px;
+    width: 33.5%;
+    margin-right: -1%;
+  }
+
+  //@include span-columns(4);//
+  @include media($desktop) {
+    height: 300px;
+    width: 33%;
+  }
+
+}
+.para-mnt-bike {
+  height: 150px;
+  text-align:center;
+  font-size: 20px;
+  font-family: "Arial";
+
+  @include media($mobile)  {
+  display: none;
+  }
+}
+.contact-us {
+  height: 300px;
+  border: 1px solid black;
+  text-align:center;
+  font-size: 20px;
+  font-family: "arial";
+}
+.email {
+  font-size: 25px;
+}
+.footer {
+  height: 100px;
+  border: 1px solid black;
+}
+.SRC-LLC {
+  text-align: center;
+  font-size: 20px;
+  font-family: "arial";
 }
