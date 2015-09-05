@@ -3,6 +3,17 @@
 
 $mobile: new-breakpoint(max-width 480px);
 $desktop: new-breakpoint(max-width 965px);
+$normal-desktop: new-breakpoint(min-width 966px);
+$border-color: #FCFEF5;
+
+//@include linear-gradient(white, #45606E);//
+//hover//
+/*.logo:hover {
+  background-image: none;
+  background: white;
+  transition:  500ms linear;
+  background-size: cover;
+}*/
 
 body {
   background-color: #45606E;
@@ -12,11 +23,9 @@ body {
   }
 .container {
   @include outer-container;
-  border: 3px solid #FCFEF5;
 }
 .top {
   height: 300px;
-  border: 3px solid #FCFEF5;
 }
 .swamp-rabbit-header {
   @include span-columns(12);
@@ -29,31 +38,28 @@ body {
   }
 }
 
-.logo {
+.logo{
   @include outer-container;
   @include span-columns(3);
   height: 29%;
-  border: 3px solid #FCFEF5;
+  border: 3px solid $border-color;
   margin: auto;
   float: none;
-  margin-top: 10%;
-  background-image: url('../images/logo-image.jpg');
+  margin-top: 5%;
+  background: url('../images/logo-image.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 10% 100%;
   @include media($desktop) {
     height: 34%;
   }
 }
-
-
-
 .best-gear {
   height: 100px;
-  border: 1px solid #FCFEF5;
   font-size: 22px;
   font-family: "arial";
   text-align: center;
+  margin-top: -10%;
 
   @include media($desktop) {
     text-align: center;
@@ -61,20 +67,25 @@ body {
 }
 .recent-bike-photo {
   height: 300px;
-  border: 3px solid #FCFEF5;
   overflow:hidden;
 
   }
 .pictures {
-
-  border: 4px solid white;
+  //@include span-columns(4);//
   @include media($mobile) {
     height: 300px;
     width: 100%;
+    //need to change the gutter size//
+  }
+  @include media($normal-desktop) {
+    height: 300px;
+    width: 30%;
+
   }
 
-  //@include span-columns(4);//
+
   @include media($desktop) {
+    $gutter: em(.5);
     height: 300px;
     width: 33%;
   }
@@ -91,7 +102,6 @@ body {
 }
 .contact-us {
   height: 300px;
-  border: 3px solid #FCFEF5;
   text-align:center;
   font-size: 20px;
   font-family: "arial";
@@ -101,7 +111,6 @@ body {
 }
 .footer {
   height: 100px;
-  border: 1px solid #FCFEF5;
 }
 .SRC-LLC {
   text-align: center;
@@ -115,11 +124,48 @@ figure {
   margin-right: 0%;
   margin-top: 0%;
 }
+@include media($normal-desktop) {
+  width: 100%;
+  margin-left: 3%;
+}
 }
 .email-link {
   color: #1F3440;
 }
+.nav {
+  //display: inline;
+  list-style-type: none;
+  //float: right;
+  margin-right: 10%;
+  @include media($mobile) {
+    margin-left: -50%;
+  }
+}
+.fa {
+  margin-top: 20%;
+  font-size: 32px;
 
+}
+.nav-pics {
+  text-decoration: none;
+  color: white;
+}
+.top-nav {
+  background-color: black;
+  height: 36%;
+  width: 10%;
+  position: fixed;
+  border-radius: 0% 20% 20% 0%;
+}
+iframe {
+  margin-left: 20%;
+  @include media($mobile) {
+    width: 85%;
+    margin-top: 10%;
+    height: 400px;
+    margin-left: 8%;
+  }
+}
 //I have no idea how this is doing what it is doing //
 @include media($mobile) {
       @keyframes slidy {
