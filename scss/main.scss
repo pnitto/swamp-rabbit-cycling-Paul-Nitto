@@ -16,7 +16,7 @@ $border-color: #FCFEF5;
 }*/
 
 body {
-  background-color: #FFFFFF;
+  background-color: #F4F3F2;
   color: #FCFEF5;
   margin: 0;
   padding: 0;
@@ -37,7 +37,7 @@ body {
 .swamp-rabbit-header {
   @include span-columns(12);
   text-align: center;
-  font-family: "arial";
+  font-family: "helvetica";
   margin-top: 3%;
 
   @include media($mobile) {
@@ -47,16 +47,15 @@ body {
 
 .logo{
   @include outer-container;
-  @include span-columns(2.5);
+  @include span-columns(1);
   height: 29%;
   float: none;
   margin-top: 5%;
   position: absolute;
-  top: 20%;
-  right: 38%;
-  left: 0;
+  top: -10%;
+  left: 10%;
   background: url('../images/srt-logo.jpg');
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: 1px -1px;
   border-radius: 10%;
@@ -96,9 +95,10 @@ body {
 
 
   @include media($desktop) {
-    $gutter: em(.5);
+    //$gutter: em(.5);
     height: 300px;
     width: 33%;
+    margin-right: -.5%;
   }
 }
 .para-mnt-bike {
@@ -113,7 +113,7 @@ body {
   }
 }
 .contact-us {
-  height: 300px;
+  height: 225px;
   text-align:center;
   font-size: 20px;
   font-family: "arial";
@@ -134,17 +134,13 @@ body {
 figure {
 @include media($desktop) {
   width: 100%;
-  margin-left: 0%;
-  margin-right: 0%;
+  margin-left: .5%;
   margin-top: 0%;
 }
 @include media($normal-desktop) {
   width: 100%;
   margin-left: 3%;
 }
-}
-.email-link {
-  color: #1F3440;
 }
 .nav-links {
   @include media($mobile) {
@@ -223,6 +219,7 @@ figure {
 }
 iframe {
   margin-left: 20%;
+  margin-top: -5%;
   @include media($mobile) {
     width: 85%;
     margin-top: 10%;
