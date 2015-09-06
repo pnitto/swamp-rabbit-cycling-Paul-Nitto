@@ -141,15 +141,23 @@ body {
 .email-link {
   color: #1F3440; }
 
+.nav-links {
+  float: left;
+  padding-right: 16%;
+  margin-left: 5%; }
+
 .nav {
-  list-style-type: none;
-  margin-right: 10%; }
+  list-style-type: none; }
   @media screen and (max-width: 480px) {
     .nav {
-      margin-left: -50%; } }
+      margin-top: 2%;
+      margin-left: 20%; } }
+
+.icons {
+  height: 13%; }
 
 .fa {
-  margin-top: 20%;
+  margin-top: 17%;
   font-size: 32px; }
 
 .nav-pics {
@@ -158,10 +166,11 @@ body {
 
 .top-nav {
   background-color: black;
-  height: 36%;
-  width: 10%;
+  height: 15%;
+  width: 100%;
   position: fixed;
-  border-radius: 0% 20% 20% 0%; }
+  bottom: 0;
+  left: 0; }
 
 iframe {
   margin-left: 20%; }
