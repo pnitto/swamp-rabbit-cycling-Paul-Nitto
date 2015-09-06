@@ -2,7 +2,7 @@
 @import '../bower_components/neat/app/assets/stylesheets/neat';
 
 $mobile: new-breakpoint(max-width 480px);
-$desktop: new-breakpoint(max-width 965px);
+$desktop: new-breakpoint(min-width 965px);
 $normal-desktop: new-breakpoint(min-width 966px);
 $border-color: #FCFEF5;
 
@@ -26,6 +26,9 @@ body {
 }
 .top {
   height: 300px;
+  @include media($desktop) {
+    margin-top: 10%;
+  }
 }
 .swamp-rabbit-header {
   @include span-columns(12);
@@ -133,10 +136,10 @@ figure {
   color: #1F3440;
 }
 .nav-links {
+  @include media($mobile) {
   float: left;
   padding-right: 16%;
-  margin-left: 5%;  
-  @include media($mobile) {
+  margin-left: 5%;
 }
 }
 .nav {
@@ -150,21 +153,42 @@ figure {
   height: 13%;
 }
 .fa {
+  @include media($mobile) {
   margin-top: 17%;
   font-size: 32px;
-
+}
 }
 .nav-pics {
   text-decoration: none;
   color: white;
 }
 .top-nav {
+  @include media($mobile) {
   background-color: black;
-  height: 15%;
+  height: 10%;
   width: 100%;
   position: fixed;
   bottom: 0;
   left: 0;
+  z-index: 1;
+}
+@include media($desktop) {
+  display: none;
+}
+}
+.desktop-nav {
+  @include media($desktop) {
+    background-color: black;
+    height: 10%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+  @include media($mobile) {
+    display: none;
+  }
 }
 iframe {
   margin-left: 20%;

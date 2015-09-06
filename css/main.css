@@ -29,6 +29,9 @@ body {
 
 .top {
   height: 300px; }
+  @media screen and (min-width: 965px) {
+    .top {
+      margin-top: 10%; } }
 
 .swamp-rabbit-header {
   float: left;
@@ -67,7 +70,7 @@ body {
     display: table; }
   .logo:last-child {
     margin-right: 0; }
-  @media screen and (max-width: 965px) {
+  @media screen and (min-width: 965px) {
     .logo {
       height: 34%; } }
 
@@ -77,7 +80,7 @@ body {
   font-family: "arial";
   text-align: center;
   margin-top: -10%; }
-  @media screen and (max-width: 965px) {
+  @media screen and (min-width: 965px) {
     .best-gear {
       text-align: center; } }
 
@@ -95,7 +98,7 @@ body {
     height: 300px;
     width: 30%; } }
 
-@media screen and (max-width: 965px) {
+@media screen and (min-width: 965px) {
   .pictures {
     height: 300px;
     width: 33%; } }
@@ -126,7 +129,7 @@ body {
   font-size: 20px;
   font-family: "arial"; }
 
-@media screen and (max-width: 965px) {
+@media screen and (min-width: 965px) {
   figure {
     width: 100%;
     margin-left: 0%;
@@ -141,10 +144,11 @@ body {
 .email-link {
   color: #1F3440; }
 
-.nav-links {
-  float: left;
-  padding-right: 16%;
-  margin-left: 5%; }
+@media screen and (max-width: 480px) {
+  .nav-links {
+    float: left;
+    padding-right: 16%;
+    margin-left: 5%; } }
 
 .nav {
   list-style-type: none; }
@@ -156,21 +160,42 @@ body {
 .icons {
   height: 13%; }
 
-.fa {
-  margin-top: 17%;
-  font-size: 32px; }
+@media screen and (max-width: 480px) {
+  .fa {
+    margin-top: 17%;
+    font-size: 32px; } }
 
 .nav-pics {
   text-decoration: none;
   color: white; }
 
-.top-nav {
-  background-color: black;
-  height: 15%;
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-  left: 0; }
+@media screen and (max-width: 480px) {
+  .top-nav {
+    background-color: black;
+    height: 10%;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1; } }
+
+@media screen and (min-width: 965px) {
+  .top-nav {
+    display: none; } }
+
+@media screen and (min-width: 965px) {
+  .desktop-nav {
+    background-color: black;
+    height: 10%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%; } }
+
+@media screen and (max-width: 480px) {
+  .desktop-nav {
+    display: none; } }
 
 iframe {
   margin-left: 20%; }
