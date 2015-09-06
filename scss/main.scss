@@ -47,19 +47,19 @@ body {
 
 .logo{
   @include outer-container;
-  @include span-columns(3);
+  @include span-columns(2.5);
   height: 29%;
   float: none;
-  border: 3px solid $border-color;
   margin-top: 5%;
   position: absolute;
   top: 20%;
   right: 38%;
   left: 0;
-  background: url('../images/logo-image.jpg');
+  background: url('../images/srt-logo.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 10% 100%;
+  background-position: 1px -1px;
+  border-radius: 10%;
   @include media($desktop) {
     height: 34%;
   }
@@ -69,10 +69,11 @@ body {
   font-size: 22px;
   font-family: "arial";
   text-align: center;
-  margin-top: -10%;
+  margin-top: -18%;
 
   @include media($desktop) {
     text-align: center;
+    margin-top: -10%;
   }
 }
 .recent-bike-photo {
@@ -155,8 +156,8 @@ figure {
 .nav {
   list-style-type: none;
   @include media($mobile) {
-    margin-top: 2%;
-    margin-left: 20%;
+    margin-top: 1%;
+    margin-left: 13%;
   }
 }
 .icons {
@@ -165,7 +166,6 @@ figure {
 .fa {
   @include media($mobile) {
   margin-top: 17%;
-  font-size: 32px;
 }
 }
 .nav-pics {
@@ -208,14 +208,18 @@ figure {
   left: 0;
   margin-left: 60%;
 }
-.desktop-links {
+.desktop-links{
   display: inline-block;
   padding-right: 3%;
   font-family:"arial";
 }
 .desk-pics {
-  text-decoration: none;
   color: white;
+  text-decoration: none;
+}
+.desk-pics:hover {
+  text-decoration: none;
+  color: green;
 }
 iframe {
   margin-left: 20%;
